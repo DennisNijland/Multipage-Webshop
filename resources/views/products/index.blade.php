@@ -8,10 +8,11 @@
 			<div class="card">
 				<img class="card-img-top" src="..." alt="Card image cap">
 				<div class="card-body">
-					<h2 class="card-title">{{ $product->Name}}</h2>
-					<p class="card-text">{{ $product->Description }}</p>
-					<h5 class="card-price">{{ $product->Price }}</h5>
-					<a href="#" class="btn btn-primary">Add to cart</a>
+					<a href="/product/{{$product->id}}"><h2 class="card-title">{{ $product->name}}</h2></a>
+					<h5 class="card-subtitle">{{ $product->category_name }}</h3>
+					<p class="card-text">{{ $product->description }}</p>
+					<h5 class="card-price">{{ $product->price }}</h5>
+					<a href="#{{$product->id}}" class="btn btn-primary">Add to cart</a>
 				</div>
 			</div>
 		@endforeach
