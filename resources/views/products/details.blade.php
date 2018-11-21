@@ -10,7 +10,7 @@
                         <h2 class="card-title">{{ $products->name}}</h2></a>
                         <h5 class="card-subtitle">{{ $products->category_name }}</h3>
                             <p class="card-text">{{ $products->description }}</p>
-                            <h5 class="card-price">{{ $products->price }}</h5>
+                            <h5 class="card-price">€ {{ $products->price }}</h5>
                             <a href="#{{$products->id}}" class="btn btn-primary">Add to cart</a>
                     </div>
                 </div>

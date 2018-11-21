@@ -11,7 +11,7 @@
 					<a href="/product/{{$product->id}}"><h2 class="card-title">{{ $product->name}}</h2></a>
 					<h5 class="card-subtitle">{{ $product->category_name }}</h3>
 					<p class="card-text">{{ $product->description }}</p>
-					<h5 class="card-price">{{ $product->price }}</h5>
+					<h5 class="card-price">€ {{ $product->price }}</h5>
 					<a href="#{{$product->id}}" class="btn btn-primary">Add to cart</a>
 				</div>
 			</div>
