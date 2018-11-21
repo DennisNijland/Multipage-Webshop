@@ -32,6 +32,9 @@
                 <a class="navbar-text" href="/categories">
                     Categories
                 </a>
+                <a class="navbar-text" href="/products">
+                    Products
+                </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
