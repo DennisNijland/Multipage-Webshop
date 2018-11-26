@@ -12,12 +12,21 @@
 */
 
 Route::get('/', function () {
+
+
     return view('welcome');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/products', 'ProductController@index');
-Route::get('/product/{id}','ProductController@getDetails');
-Route::get('/categories', 'CategoryController@index');
+
+Route::group(['middleware' => ['web']], function () {
+    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/products', 'ProductController@index');
+    Route::get('/product/{id}','ProductController@getDetails');
+    Route::get('/categories', 'CategoryController@index');
+    Route::get('/cart', 'ShoppingCartController@index');
+    Route::get('/kill', 'ShoppingCartController@killSession');
+    Route::get('/cart/add/{id}', 'ShoppingCartController@addToCart');
+
+});
