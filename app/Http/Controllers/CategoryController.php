@@ -19,6 +19,12 @@ class CategoryController extends Controller
         return view('categories.index', $categories);
     }
 
+    public function getDetails($id)
+    {
+        $categoryid = $id;
+        $products = Product::find($categoryid);
+        return view('category.details')->with('product', $products);
+    }
     /**
      * Show the form for creating a new resource.
      *

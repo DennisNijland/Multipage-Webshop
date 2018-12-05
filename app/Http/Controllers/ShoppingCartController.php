@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Classes\ShoppingCart;
+use App\Product;
 use Illuminate\Support\Facades\Session;
 
 class ShoppingCartController extends Controller
@@ -15,43 +16,11 @@ class ShoppingCartController extends Controller
      */
     public function index(Request $request)
     {
-        dd($request->session());
-
-        return ShoppingCart::GetFromSession();
-
-        /*$value = session('cart');
-
-        // Specifying a default value...
-        $value = session('cart', 'cart');
-
-
-        return View('cart.index')->with('ShoppingCart', $value);*/
+        return ShoppingCart::getFromSession();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function addToCart(Request $request, $id)
     {
-        $request->session()->push('cart', $id);
-
-        //dd($request->session());
-
-        return redirect('cart');
-
         return ShoppingCart::addToCart($id);
     }
 
@@ -59,6 +28,11 @@ class ShoppingCartController extends Controller
     {
         $request->session()->flush();
         return redirect('');
+    }
+
+    public function changeAmount($id)
+    {
+        ShoppingCart::changeAmount($id);
     }
 
     /**

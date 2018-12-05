@@ -8,7 +8,7 @@
 			<div class="card">
 				<div class="card-body">
 					<h2 class="card-title">{{ $category->category_name}}</h2>
-                    <a href="#{{$category->id}}" class="btn btn-primary">View category</a>
+                    <a href="category/{{$category->id}}" class="btn btn-primary">View category</a>
 				</div>
 			</div>
 		@endforeach

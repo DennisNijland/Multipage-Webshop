@@ -29,18 +29,19 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-text" href="/categories">
-                    Categories
-                </a>
-                <a class="navbar-text" href="/products">
-                    Products
-                </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <li>
+                            <a class="navbar-link" href="/categories">Categories</a>
+                        </li>
+                        <li>
+                            <a class="navbar-link" href="/products">Products</a>
+                        </li>
+                        <li>
+                            <a class="navbar-link" href="/cart">Cart</a>
+                        </li>
                     </ul>
-
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
